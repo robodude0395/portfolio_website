@@ -1,0 +1,123 @@
+/* ===== PAGE LAYOUT ===== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+
+/* ===== PROJECT SECTIONS ===== */
+
+.project-section {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Fixed height images */
+.project-img {
+  height: 250px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Text area */
+.project-text {
+  flex: 1;
+}
+
+/* Title + date alignment */
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-date {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* ===== ALTERNATING PROJECT LAYOUT ===== */
+
+.project-section:nth-child(odd) .project-content {
+  flex-direction: row-reverse;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media (max-width: 700px) {
+  .project-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-section:nth-child(even) .project-content {
+    flex-direction: column;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-title {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
